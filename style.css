@@ -1,21 +1,71 @@
+.montserrat-main {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 * {
     line-height: 1rem;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
 .container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 3fr;
     grid-template-areas:
-        "dash head"
+        "dash header"
         "dash content";
 }
 
 .dashboard {
+    padding-left: 20px;
+    padding-bottom: 400px;
+
     grid-area: dash;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(9, 1fr);
+    gap: 10px;
+
+    color: #000000;
+    background-color: #FF6E1F;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.options, .heading {
+    display: flex;
+    gap: 15px;
+}
+
+.dash-img {
+    object-fit: cover;
+    width: 20px;
+}
+
+.heading-img {
+    width: 45px;
+}
+
+.heading-text {
+    font-size: 1.6rem;
+    padding-top: 12px;
+}
+
+.heading {
+    grid-row: 1;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.settings {
+    margin-top: 40px;
 }
 
 .header {
